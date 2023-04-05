@@ -13,8 +13,10 @@
 
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}" aria-current="page">{{user}}, Logout<span
-                            class="visually-hidden">(current)</span></a>
+                    <a class="nav-link" href="{% url 'account_logout' %}" aria-current="page">
+                        
+                        {{user}}, Logout
+                    <spanclass="visually-hidden">(current)</span></a>
                 </li>
                 {% else %}
                 <li class="nav-item">

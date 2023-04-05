@@ -17,7 +17,7 @@
             <a class="button nav-link" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
             {% get_providers as socialaccount_providers %}
             {% if socialaccount_providers %}
-            <a href="{% provider_login_url 'github' %}">Login via Github</a>
+            <a href="{% provider_login_url 'github' process='login' %}">Login via Github</a>
             {% endif %} 
             
         </div>
