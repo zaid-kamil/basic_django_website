@@ -10,13 +10,13 @@
                     <a class="nav-link" href="/" aria-current="page">Home <span
                             class="visually-hidden">(current)</span></a>
                 </li>
-
+            </ul>
+            <ul class="navbar-nav bg-primary rounded-5 px-3">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_logout' %}" aria-current="page">
-                        
-                        {{user}}, Logout
-                    <spanclass="visually-hidden">(current)</span></a>
+                        Logout
+                    </a>
                 </li>
                 {% else %}
                 <li class="nav-item">
@@ -28,7 +28,6 @@
                             class="visually-hidden">(current)</span></a>
                 </li>
                 {% endif %}
-
             </ul>
         </div>
     </div>

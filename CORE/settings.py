@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
     'app',
     'django_bootstrap5',
+    'blog',
 ]
 
 SITE_ID = 3
