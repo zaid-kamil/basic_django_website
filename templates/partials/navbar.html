@@ -10,6 +10,20 @@
                     <a class="nav-link" href="/" aria-current="page">Home <span
                             class="visually-hidden">(current)</span></a>
                 </li>
+                
+                {% if user.is_superuser %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'admin:index' %}">
+                        Dashboard
+                    </a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blogs' %}">
+                        Articles
+                    </a>
+                </li>
+                    
             </ul>
             <ul class="navbar-nav bg-primary rounded-5 px-3">
                 {% if user.is_authenticated %}
