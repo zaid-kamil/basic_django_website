@@ -24,3 +24,8 @@ class Article(models.Model):
         if not self.slug:
             self.slug = [self.title.replace(' ', '-').lower()][:50] # replace spaces with hyphens and make it lowercase
         super().save(*args, **kwargs)
+
+class Subscriber(models.Model):
+    email = models.EmailField()
+    def __str__(self):
+        return self.email

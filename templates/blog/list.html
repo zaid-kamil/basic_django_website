@@ -1,5 +1,5 @@
 {% extends 'layout/base.html' %}
-
+{% load django_bootstrap5 %}
 {% block content %}
 <div class="container">
     <div class="row">
@@ -40,6 +40,17 @@
                 possimus placeat nam! Vitae, molestias. Dolores, neque voluptatum tempora quasi, error ullam quae et
                 maxime iure maiores pariatur qui repellat deserunt! Officia voluptates amet incidunt natus illum?
             </p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid p-5 bg-info text-white">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form method="post" autocomplete="off">
+                {% csrf_token %}
+                {% bootstrap_form form layout="inline" %}
+                <button type="submit" class="btn btn-light text-secondary my-3">Submit</button>
+            </form>
         </div>
     </div>
 </div>

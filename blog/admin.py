@@ -1,10 +1,11 @@
 from django.contrib import admin
-from .models import Article, Tag
+from .models import Article, Tag, Subscriber
 
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    '''Admin View for Article'''
     list_display = ('title','slug','created_on')
 
 admin.site.register(Tag)
+
+admin.site.register(Subscriber)
